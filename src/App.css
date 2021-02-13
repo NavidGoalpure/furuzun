@@ -1,26 +1,30 @@
-
 /* @import './Vazirfont.css'; */
-:root{
+:root {
   --main-color: #c8cccf;
 }
+a {
+  color: inherit;
+  text-decoration: none;
+  font-size: inherit;
+  font-weight: inherit;
+}
 .App-header {
-  
-  min-height: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: 5rem;
-  height: 130vh;
   background-image: url(backgroundpic.jpg);
-  background-repeat: no-repeat,no-repeat,no-repeat;
-  background-size: 100% 100%,cover,cover;
-  background-position: 0 0,50%,bottom;
-  background-attachment: fixed,fixed,fixed;
+  background-repeat: no-repeat, no-repeat, no-repeat;
+  background-size: 100% 100%, cover, cover;
+  background-position: 0 0, 50%, bottom;
+  background-attachment: fixed, fixed, fixed;
   position: relative;
 }
 .App {
   text-align: center;
+  height: 100vh;
 }
 .App-sec {
   width: 38rem;
@@ -31,84 +35,115 @@
   align-items: center;
   /* box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); */
   position: relative;
-  max-width: 92%;
+  max-width: 35.5rem;
   max-height: 94%;
+  backdrop-filter: blur(5px);
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(0, 0, 0, 0.1);
 }
 .App-logo {
   pointer-events: none;
   width: 70%;
-  height: 26%;
-  max-width:21rem;
+  height: 28%;
+  max-width: 21rem;
+  object-fit: contain;
+
+  opacity: 0.7;
 }
-/* .border1{
-  position: absolute;
-    height: 1px;
-    width: 18%;
-    top: 6.5rem;
-    left: 15px;
-    background-color: black;
-}
-.border2{
-  position: absolute;
-    height: 1px;
-    width: 15%;
-    top: 6.5rem;
-    right: 10px;
-    background-color: black;
-} */
+
 .BeautyLogo {
-  width:70%;
-  height: 45%;
+  width: 60%;
+  height: 60%;
+  object-fit: contain;
+  position: absolute;
+
+  opacity: 0.8;
+  bottom: 20%;
 }
 .App-link {
   /* color: #696969; */
   color: var(--main-color);
-  border:1px solid;
-  border-radius: 100px;
   text-decoration: none;
-  width: 70%;
+
+  width: 30%;
+  line-height: 2.3rem;
   font-size: 30%;
-  margin-top: 3rem;
+  margin-top: 2rem;
+  position: absolute;
+  bottom: 44%;
+  color: white;
+  font-size: 34px;
+  font-weight: bolder;
 }
 .contact-us {
   margin-top: 1.5rem;
   width: 100%;
-  display:flex;
+  display: flex;
   justify-content: center;
-  position: relative;
+  flex-direction: column;
+  height: 8rem;
+  position: absolute;
+  bottom: 1%;
+  max-width: inherit;
+  align-items: flex-end;
 }
 .icons {
-    width: 3.25rem;
-    height: 3.25rem;
-    margin-right: 10%;
-    margin-left: 10%;
-    color: var(--main-color);
-    min-width: 20px;
-    /* border: solid 1px;
-    border-radius: 50%; */
-    /* padding: 5%; */
+  width: 2.25rem;
+  height: 2.25rem;
+  margin-right: 0.3rem;
+  min-width: 20px;
 }
-.icons:hover{
-  transition: color .3s;
-  color:pink;
+.row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 18px;
+  width: 40%;
+  color: var(--main-color) !important;
 }
-.App-link:hover{
-  transition: color .3s ease, .3s ease;
-  color:pink;
+
+.row:hover {
+  transition: color 0.3s;
+  color: pink !important;
 }
-@media only screen and (max-width: 425px){
-  .BeautyLogo{
-    height: 35%;
+.contact-item {
+  margin: 0;
+}
+.App-link:hover {
+  transition: color 0.3s ease, 0.3s ease;
+  color: pink;
+}
+@media only screen and (max-width: 475px) {
+  .contact-us {
+    align-items: center;
   }
-  .App-sec{
-    max-height: 75%;
+}
+@media only screen and (max-width: 325px) {
+  .App-link {
+    font-size: 18px;
+    line-height: 1.3rem;
+    bottom: 45%;
   }
-  .icons{
-    width: 2.5rem;
+  .BeautyLogo {
+    width: 80%;
+    height: 80%;
+    bottom: 10%;
   }
 }
-@media only screen and (max-width: 768px){
-  .BeautyLogo{
+@media only screen and (max-width: 768px) {
+  .BeautyLogo {
     max-width: 20rem;
+  }
+  .App-sec {
+    max-height: 75%;
+    max-width: 80%;
+  }
+  .App-link {
+    font-size: 22px;
+    line-height: 1.5rem;
+  }
+  .row {
+    width: 70%;
   }
 }
